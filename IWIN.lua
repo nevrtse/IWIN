@@ -224,7 +224,7 @@ UINote.Name = "UINote"
 UINote.Size = UDim2.new(1, 0, 0, 20)
 UINote.Position = UDim2.new(0, 0, 0, 310)
 UINote.BackgroundTransparency = 1
-UINote.Text = "CTRL = Afficher/Masquer l'UI"
+UINote.Text = "F1 = Afficher/Masquer l'UI"
 UINote.TextColor3 = Color3.fromRGB(200, 200, 200)
 UINote.TextSize = 12
 UINote.Font = Enum.Font.SourceSans
@@ -563,7 +563,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
         
         StatusLabel.Text = "Statut ESP: " .. (ESPEnabled and "Activé" or "Désactivé")
         StatusLabel.TextColor3 = ESPEnabled and Color3.fromRGB(100, 255, 100) or Color3.fromRGB(255, 100, 100)
-    elseif input.KeyCode == Enum.KeyCode.RCTRL then
+    elseif input.KeyCode == Enum.KeyCode.F1 then
         UIVisible = not UIVisible
         Frame.Visible = UIVisible
     end
@@ -620,5 +620,5 @@ game:GetService("CoreGui").ChildRemoved:Connect(function(child)
 end)
 
 print("Script ESP chargé")
-print("CTRL = Afficher/Masquer l'interface")
+print("F1 = Afficher/Masquer l'interface")
 print("F2 (par défaut) = Activer/Désactiver ESP")
